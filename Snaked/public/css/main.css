@@ -1,0 +1,165 @@
+/* MAIN CSS STYLE SHEET */
+/* By Anthony Riley */
+
+html, body{
+  min-height: 100vh;
+  overflow: auto;
+  padding: 0px;
+  margin:0px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #101010;
+  color: #F0F0F0;
+  z-index: -1;
+  position: relative;
+}
+
+h1 {
+  flex: 0 0 100%;
+  font-size:200px;
+  margin-block-start: 0.1em;
+  margin-block-end: 0.1em;
+  font-weight: bolder;
+  text-align: center;
+}
+
+h2 {
+  flex: 0 0 100%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 64px;
+}
+
+h3 {
+  flex: 0 0 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+input[type=text] {
+  border:2px solid #456879;
+	border-radius:10px;
+
+  font-size: 1.5em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-align: center;
+
+  width: 15em;
+  height: 2rem;
+
+  flex: 0 0 100%;
+}
+
+button {
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+
+  width: 6em;
+  height: 2em;
+  margin: 20px;
+
+  display: block;
+  background-color: #161616;
+  color: #F0F0F0;
+
+  padding: 0px;
+  margin 10px;
+}
+
+.center_elements{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   text-align: center;
+}
+
+.margin_align{
+  margin:auto;
+  margin-top: 10%;
+}
+
+.fullscreen{
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+.profile_picture{
+  position: absolute;
+  left: 0px;
+}
+
+.menu_button{
+  font-size: 24px;
+  font-weight:bold;
+  background-color: #161616;
+
+  width: 10em;
+  height 2em;
+  flex: 0.5%;
+}
+
+.medium_divider{
+  width: 300px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #101010;
+  border-bottom: 16px solid #101010;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#error {
+  display: none;
+  background-color: #101010;
+
+  z-index: 99;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+#loading {
+  display: flex;
+  height: 100vh;
+  z-index: 99;
+}
+
+#login {
+  display: none;
+}
+
+#menu {
+  display: none;
+}
+
+#create_account {
+  display: none;
+}
+
+#username_input_error{
+  font-size: 16px;
+  font-weight: normal;
+  color: #AAAAAA;
+}
+
+
+
+@-ms-viewport{
+  width: device-width;
+}

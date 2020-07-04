@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- GENERAL -->
+    <title> snaked.io </title>
+
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="snaked, snake, multiplayer snake">
+    <meta name="author" content="Pythonic">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- For mobile viewing -->
+
+    <meta name="google-signin-client_id" content="381086073246-j7b9pnkhmb2tm4f0iuh6c6fmp8ifgn1f.apps.googleusercontent.com">
+
+    <!-- LINKS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+    <link href="fonts/pricedown.ttf" rel="stylesheet">
+
+    <!-- HEAD SCRIPTS -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  </head>
+
+  <body>
+
+    <div id="error" class="center_elements margin_align">
+      Please reload the page and try again.
+    </div>
+
+    <div id="loading" class="center_elements">
+      <div class="loader"></div>
+    </div>
+
+    <div id ="login">
+      <div class="center_elements margin_align">
+        <h1>SNAKED</h1>
+        <h3>Login to continue...</h3>
+        <div class="g-signin2" data-onsuccess="logged_in" data-width="250px" data-height="50px" data-longtitle="true" data-theme="light"></div>
+      </div>
+    </div>
+
+    <div id="menu">
+      <div class="margin_align">
+        <h2 style="font-weight: normal;">Welcome <span id="welcome_username" style="font-weight: bold;"></span></h2>
+        <div class="center_elements">
+          <button class="menu_button" onclick="find_normal_game()">Play Normal</button>
+          <button class="menu_button">Play Ranked</button>
+          <button class="menu_button">Leaderboard</button>
+          <button class="menu_button" onclick="sign_out()">Log Out</button>
+        </div>
+        <hr class="medium_divider">
+        <div class="center_elements">
+
+        </div>
+      </div>
+    </div>
+
+    <div id="create_account">
+      <div class="margin_align">
+        <h3>Choose a Username...</h3>
+        <input id="username" type="text" autocomplete="off" maxlength="20">
+        <h3 id="username_input_error"></h3>
+        <div class="center_elements">
+          <button onclick="create_account()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BODY SCRIPTS -->
+
+    <!-- Firebase and Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+    <script>
+      // Firebase config
+      var firebaseConfig = {
+        apiKey: "AIzaSyBHot9E-xfvliGWxxCp1fwVHOFQ1pI7wuw",
+        authDomain: "snaked-io.firebaseapp.com",
+        databaseURL: "https://snaked-io.firebaseio.com",
+        projectId: "snaked-io",
+        storageBucket: "snaked-io.appspot.com",
+        messagingSenderId: "381086073246",
+        appId: "1:381086073246:web:d00f1bbaf5d0cd4d79968f",
+        measurementId: "G-N7PPFJNLRL"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+
+    <script src="js/index.js"></script>
+
+  </body>
+
+</html>
